@@ -1,2 +1,2 @@
-# JAVA-DAY-2
+# JAVA BOOTCAMP DAY-2
 Java Bootcamp Day 2 
