@@ -1,0 +1,123 @@
+Today task:
+1. Create new database and table for users where we can manage user balance.
+
+Ans: 
+    CREATE DATABASE UserBalanceDB;
+
+    USE UserBalanceDB;
+
+    CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(100),
+    balance DECIMAL(10, 2)
+    );
+
+
+2. ⁠insert some records of different-2 user with balance.
+
+Ans: INSERT INTO users (user_name, balance)
+      VALUES ('Alice', 1000.00),
+       ('Bob', 1500.50),
+       ('Charlie', 2000.75),
+       ('David', 500.00),
+       ('Eva', 1200.20);
+
+3. ⁠practice database insert, update, delete and fetch records queries 
+
+Ans: 
+     1.Insert Query: 
+      INSERT INTO users (user_name, balance)
+      VALUES ('Frank', 3000.00);
+
+     2.  Update Query:
+       UPDATE users
+       SET balance = 1800.00
+        WHERE user_name = 'Alice';
+
+    3. Delete Query:
+        DELETE FROM users
+        WHERE user_name = 'David';
+
+     4. Fetch Records Query:
+        SELECT * FROM users;
+
+
+4. ⁠use while loop with scanner class where we read input from user until user not give exit option to break loop.
+
+Ans : 
+             import java.util.Scanner;
+
+             public class UserInputLoop {
+              public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+              String input;
+
+             while (true) {
+            System.out.print("Enter something (type 'exit' to stop): ");
+            input = scanner.nextLine();
+            
+            if (input.equalsIgnoreCase("exit")) {
+                break;
+            }
+
+            System.out.println("You entered: " + input);
+        }
+
+        System.out.println("Loop exited.");
+        scanner.close();
+    }
+}
+
+
+
+5. ⁠do some practical questions of break and continue with for and while loop
+
+Ans:    
+          public class BreakContinueExamples {
+
+    public static void main(String[] args) {
+        
+        // Example 1: for loop with continue (skips even numbers)
+        System.out.println("For loop with continue:");
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 0) {
+                continue;  // Skip even numbers
+            }
+            System.out.println(i);  // Prints odd numbers
+        }
+
+        // Example 2: for loop with break (stops when number is 6)
+        System.out.println("\nFor loop with break:");
+        for (int i = 1; i <= 10; i++) {
+            if (i == 6) {
+                break;  // Stop loop when i equals 6
+            }
+            System.out.println(i);  // Prints 1 to 5
+        }
+
+        // Example 3: while loop with continue (skips numbers divisible by 3)
+        System.out.println("\nWhile loop with continue:");
+        int j = 1;
+        while (j <= 10) {
+            if (j % 3 == 0) {
+                j++;  // Important to increment j before continue
+                continue;  // Skip numbers divisible by 3
+            }
+            System.out.println(j);  // Prints numbers not divisible by 3
+            j++;
+        }
+
+        // Example 4: while loop with break (stops when number is 7)
+        System.out.println("\nWhile loop with break:");
+        int k = 1;
+        while (k <= 10) {
+            if (k == 7) {
+                break;  // Stop loop when k equals 7
+            }
+            System.out.println(k);  // Prints 1 to 6
+            k++;
+        }
+    }
+}
+
+
